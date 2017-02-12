@@ -4,4 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   #has_many :pins     natomiast dla pinu belongs_to :user
+  has_many :notes
 end
