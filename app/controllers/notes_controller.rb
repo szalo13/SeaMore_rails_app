@@ -1,10 +1,11 @@
 class NotesController < ApplicationController
+  before_action :require_login
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.all
+    @notes = Note.where( 'user_id' => current_user.id )
   end
 
   # GET /notes/1
@@ -67,8 +68,15 @@ class NotesController < ApplicationController
       @note = Note.find(params[:id])
     end
 
+    def require_login
+      unless user_signed_in?
+        redirect_to new_user_registration_path
+      end
+    end
+
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:tittle, :description, :note)
+      params.require(:note).permit(:tittle, :description, :note, :private)
     end
 end

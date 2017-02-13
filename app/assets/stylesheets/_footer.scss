@@ -1,0 +1,76 @@
+.footer {
+    background-color: $lum-dark-grey;
+    padding: 0;
+    color: $lum-fot-white;
+    font-size: 12px;
+
+    .log-in {
+        background-color: $lum-md-grey;
+        margin-bottom: $padd1;
+        padding: $padd2 0;
+        h1, h2 {
+            text-align: center;
+            margin: 0;
+            padding: $padd4 0 0 0;
+        }
+        h1 {
+            font-size: 2.4em;
+        }
+        h2 {
+            font-size: 1.4em;
+            .btn-success     {
+                margin-left: $padd2;
+            }
+        }
+    }
+    h4 {
+        font-weight: 900;
+        color: $lum-fot-grey;
+    }
+
+    li {
+        padding-left: 10px;
+    }
+
+    a:visited,
+    a:link {
+        color: $lum-fot-white;
+    }
+
+    a:hover,
+    a:active {
+        color: $lum-md-grey;
+        text-decoration: none;
+    }
+
+    .social {
+        text-align: center;
+        padding: $padd2 10px;
+        li {
+            display: inline-block;
+        }
+    }
+
+    .rights {
+        text-align: center;
+        color: #aaa;
+        padding: $padd1 0;
+    }
+    @media screen and (min-width: 480px) {
+
+    }
+
+    @media screen and (min-width: 768px) {
+     text-align: left;
+        h1 {
+            text-align: left;
+        }
+        h2 {
+            text-align: right;
+        }
+    }
+
+    @media screen and (min-width: 996px) {
+
+    }
+}
